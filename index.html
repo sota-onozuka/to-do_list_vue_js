@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>to-do list practice</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+  <div id="app">
+    <form v-on:submit.prevent="addOrSet">
+      <label for="new-todo">Add a todo</label>
+      <input
+        v-model="newTodoText"
+        ref="editor"
+      >
+      <span></span>
+        <button>{{ changeButtonText }}</button>
+      </span>
+    </form>
+
+    <ul >
+      <li
+        is="todo-options"
+        v-for="(todo, index) in todos"
+        v-bind:key="todo.id"
+        v-bind:title="todo.title"
+        v-on:removetodo="removeTodo(index)"
+        v-on:seteditinfo="setEditInfo(index)"
+      >
+      </li>
+    </ul>
+  </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
