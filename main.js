@@ -73,6 +73,6 @@ new Vue({
     resetInfo() {
       this.newTodoText = '';
       this.editIndex = -1;
-  },
+    },
   },
 })
