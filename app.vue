@@ -12,7 +12,7 @@
       <li
         v-for="(todo, index) in todos"
         v-bind:key="todo.id">
-      {{todo.title}}
+        {{todo.title}}
         <span class="pull-right">
           <button v-on:click="removeTodo(index)">Remove</button>
           <button v-on:click="setEditInfo(index)">Edit</button>
